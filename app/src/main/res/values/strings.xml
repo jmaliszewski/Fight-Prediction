@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fight Prediction</string>
+    <string name="sing_up_information">Nie masz jeszcze konta? Zarejestruj się tutaj</string>
+    <string name="log_in">Zaloguj</string>
+    <string name="sign_in">Masz już konto? Zaloguj się</string>
+    <string name="forget_password">Zapomniałeś hasła?</string>
+    <string name="registration">Rejestracja</string>
+    <string name="create_account">Załóż konto</string>
+    <string name="password_recovery">Odzyskiwanie hasła</string>
+    <string name="recover_password">Odzyskaj hasło</string>
+    <string name="bad_login_data">Błędny login lub hasło</string>
+    <string name="upcoming_events">Nadchodzące wydarzenia</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.fightprediction.login_and_registration.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.fightprediction.login_and_registration.ResetPasswordFragment"
+        android:label="reset_password_fragment"
+        tools:layout="@layout/reset_password_fragment" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.fightprediction.login_and_registration.RegistrationFragment"
+        android:label="registration_fragment"
+        tools:layout="@layout/registration_fragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.example.fightprediction.event.EventsFragment"
+        android:label="events_fragment"
+        tools:layout="@layout/events_fragment" >
+        <action
+            android:id="@+id/action_eventsFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+        <action
+            android:id="@+id/action_eventsFragment_to_leaguesFragment"
+            app:destination="@id/leaguesFragment" />
+        <action
+            android:id="@+id/action_eventsFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="com.example.fightprediction.event.EventDetailsFragment"
+        android:label="event_details_fragment"
+        tools:layout="@layout/event_details_fragment" >
+        <argument
+            android:name="eventId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_eventDetailsFragment_to_fightDetailsFragment"
+            app:destination="@id/fightDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fightDetailsFragment"
+        android:name="com.example.fightprediction.fight.FightDetailsFragment"
+        android:label="fight_details_fragment"
+        tools:layout="@layout/fight_details_fragment" >
+        <action
+            android:id="@+id/action_fightDetailsFragment_to_fighterDetailsFragment"
+            app:destination="@id/fighterDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fighterDetailsFragment"
+        android:name="com.example.fightprediction.fighter.FighterDetailsFragment"
+        android:label="fighter_details_fragment"
+        tools:layout="@layout/fighter_details_fragment" />
+    <fragment
+        android:id="@+id/leaguesFragment"
+        android:name="com.example.fightprediction.league.LeaguesFragment"
+        android:label="leagues_fragment"
+        tools:layout="@layout/leagues_fragment" >
+        <action
+            android:id="@+id/action_leaguesFragment_to_leagueDetailsFragment"
+            app:destination="@id/leagueDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leagueDetailsFragment"
+        android:name="com.example.fightprediction.league.LeagueDetailsFragment"
+        android:label="league_details_fragment"
+        tools:layout="@layout/league_details_fragment" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.fightprediction.user_profile.UserProfileFragment"
+        android:label="user_profile_fragment"
+        tools:layout="@layout/user_profile_fragment" />
+</navigation>
